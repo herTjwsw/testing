@@ -1,16 +1,16 @@
 # Old Roblox MIDI Converter
 
-A small local web app: upload a `.mid` / `.midi`, render it through the bundled **Wind of Fjords + Voyage to Eternity.sf2** soundfont, then export a deliberately lo-fi mono WAV named after the MIDI (for example `my_song.mid` → `my_song.wav`).
+A small, locally-run web app: Upload a `.mid` or `.midi` file, have it rendered using the built-in soundfont **"Wind of Fjords + Voyage to Eternity.sf2,"** and then export a mono WAV file, intentionally crafted with a lo-fi aesthetic. The output filename will match the original MIDI filename (e.g., `my_song.mid` → `my_song.wav`).
 
-## Run it
+## Execution
 
-Requires Python 3.10+, [FluidSynth](https://www.fluidsynth.org/) and FFmpeg on your PATH.
+Requires Python 3.10+, as well as [FluidSynth](https://www.fluidsynth.org/) and FFmpeg (both must be added to your system PATH).
 
 - macOS: `brew install fluidsynth ffmpeg`
 - Debian/Ubuntu: `sudo apt install fluidsynth ffmpeg`
-- Windows: install FluidSynth and FFmpeg, and ensure their `bin` directories are on PATH.
+- Windows: Install FluidSynth and FFmpeg, and ensure their `bin` directories are included in your system PATH.
 
-From this folder:
+Run the following commands in this folder:
 
 ```bash
 python -m venv .venv
@@ -20,10 +20,10 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Open http://127.0.0.1:5000. Choose a MIDI, select a sample rate / bit depth, and download the resulting WAV. The defaults use 22,050 Hz, mono, unsigned 8-bit PCM plus a modest band-limit for a compact, crunchy vintage sound. The included SF2 came from the Pixeldrain link supplied in the project request; confirm you have the rights to use/share it before redistributing this folder.
+Open http://127.0.0.1:5000. Select a MIDI file, configure the sample rate and bit depth, and download the resulting WAV file. The default settings use 22,050 Hz, mono, 8-bit PCM (unsigned), and a subtle bandwidth limitation—resulting in a compact, "crisp" vintage sound. The included SF2 soundfont originates from the Pixeldrain link provided in the project request. Please ensure that you have the appropriate rights for use or distribution before sharing this folder.
 
 ## Notes
 
-- The soundfont is in `static/Wind-of-Fjords-Voyage-to-Eternity.sf2`.
-- Files render on the machine running the app; this is a local utility, not a hosted upload service.
-- MIDI playback can differ from Roblox's historical playback; the soundfont and low-quality export provide the retro feel, rather than reproducing a particular game's exact audio engine.
+- The soundfont is located at `static/Wind-of-Fjords-Voyage-to-Eternity.sf2`.
+- Files are rendered on the computer where the app is running; this is a local tool, not a hosted upload service.
+- MIDI playback may differ from the historical playback in Roblox. While the soundfont and the low-quality export produce the desired retro aesthetic, they do not precisely replicate the audio engine of any specific game.
