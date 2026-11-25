@@ -27,3 +27,4 @@ Open http://127.0.0.1:5000. Select a MIDI file, configure the sample rate and bi
 - The soundfont is located at `static/Wind-of-Fjords-Voyage-to-Eternity.sf2`.
 - Files are rendered on the computer where the app is running; this is a local tool, not a hosted upload service.
 - MIDI playback may differ from the historical playback in Roblox. While the soundfont and the low-quality export produce the desired retro aesthetic, they do not precisely replicate the audio engine of any specific game.
+- The soundfont belongs to NotRoblox from Musical Artifacts, not me.
